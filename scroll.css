@@ -22,3 +22,9 @@ body, html {
 	width: 100vw;
 	height: 100vh;
 }
+
+.floating {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}

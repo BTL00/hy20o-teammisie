@@ -5,6 +5,7 @@ div {
   width: 100%;
 }
 body, html {
+	background: rgb(225,225,225);
 	cursor: all-scroll;
   height: 360vh;
   width: 160vw;

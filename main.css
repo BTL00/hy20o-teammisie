@@ -6,6 +6,19 @@ h1, h2, h3, h4, h5 {
 	font-family: "Montserrat", Serif;
 	color: rgba(0,0,0,0.9);
 }
+a:link {
+	color: rgba(0,0,12,0.8);
+	text-decoration: underline;
+	transition: 0.3s;
+}
+a:hover {
+	color: rgba(0,0,12,0.5);
+}
+a:visited {
+	color: rgba(0,0,12,0.8);
+	text-decoration: underline;
+
+}
 .komputerowa {
 		background: #a2a3af;
 		padding: 10%; 
@@ -15,6 +28,7 @@ h1, h2, h3, h4, h5 {
 	display: inline-block;
 	width: 50%;
 	text-align: justify;
+	padding: 5px;
 }
 
 .back {
@@ -50,14 +64,21 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer {
+	margin-top: 90px;
 	font-size: 0.8rem;
 	opacity: 0.9;
 }
 input, textarea {
+	display: block;
+	background: none;
+	border: none;
+	border-bottom: solid 1px rgba(0,0,0,0.4);
 	width: 50%;
 }
 label span {
+	 display: block;
 	width: 50%;
+	min-width: 50%;
 	text-align: left;
 }
 label {
@@ -77,13 +98,13 @@ display: none;
 }
 }
 
-#comp1 .front { background: #d0ff02 }
-#comp2 .front { background: #d0aad0 }
-#comp3 .front {background: #a0dad0}
-#comp4 .front {background: #d0ff02}
-#comp5 .front {background: #d0ff02}
-#comp6 .front {background: #d0aad0}
-#comp7 .front {background: #d0aad0}
-#comp8 .front {background: #d0ff02}
-#comp9 .front {background: #a0dad0}
-#comp10 .front {background: #d0ff02}
+.not #comp1 .front { background: #d0ff02 }
+.not #comp2 .front { background: #d0aad0 }
+.not #comp3 .front {background: #a0dad0}
+.not #comp4 .front {background: #d0ff02}
+.not #comp5 .front {background: #d0ff02}
+.not #comp6 .front {background: #d0aad0}
+.not #comp7 .front {background: #d0aad0}
+.not #comp8 .front {background: #d0ff02}
+.not #comp9 .front {background: #a0dad0}
+.not #comp10 .front {background: #d0ff02}

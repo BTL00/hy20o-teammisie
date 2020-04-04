@@ -25,13 +25,16 @@ h1, h2, h3, h4, h5 {
 	text-align: center;
 	background: white;
 	margin: auto auto; 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
+
 }
 
-/* On mouse-over, add a deeper shadow */
 .front:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.front:after {
+	transform: matrix(-1, -0.1, 0, 1, 0, 0);
 }
 
 .footer {
@@ -50,3 +53,15 @@ label {
 	display: block;
 	width: 80%;
 }
+
+
+#comp1 .front { background: #d0ff02 }
+#comp2 .front { background: #d0aad0 }
+#comp3 .front {background: #a0dad0}
+#comp4 .front {background: #d0ff02}
+#comp5 .front {background: #d0ff02}
+#comp6 .front {background: #d0aad0}
+#comp7 .front {background: #d0aad0}
+#comp8 .front {background: #d0ff02}
+#comp9 .front {background: #a0dad0}
+#comp10 .front {background: #d0ff02}

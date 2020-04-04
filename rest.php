@@ -1,14 +1,14 @@
 <?php
-
+require_once("secrets.php");
 /**
  * Rest API controller
  */
 class RestAPIController 
 {
-	
-	function __construct()
+	private $captcha_secret = "";
+	function __construct($secret)
 	{
-		# code...
+		$this->captcha_secret = $secret;
 	}
 
 	function validateRecaptcha($response) {
@@ -51,14 +51,14 @@ class RestAPIController
 
 	function run() {
 		if(isset($_POST['submit'])) {
-			saveForm();
+			$this->saveForm();
 		}else 
-		if(isset($_POST['validate_token'])) {
-			validateRecaptcha($_POST['validate_token']);
+		if(isset($_GET['validate_token'])) {
+			$this->validateRecaptcha($_GET['validate_token']);
 		}
  	}
 }
 
 
 $controller = new RestAPIController();
-$controller.run();
+$controller.run($captcha_secret);

@@ -43,10 +43,12 @@
 	</script>
 </head>
 <body>
+	<!--
 	<div class="floating">
 		<a href="#link_do_infolinii"><img class="icon" src="./help.png">
 		Potrzebujesz pomocy?</a>
 	</div>
+	-->
 	<div id="strona">
 		<div class="komputerowa" id="comp1">
 			<div class="front">
@@ -123,10 +125,10 @@
 						<h2>Dodaj swoją poradę</h2>
 						<p>Jeśli masz poradę dla osób nietechnicznych na czas walki z #covid19 zostaw ją tutaj.</p>
 						<form id="#dodaj">
-							<label for="email">Twój email (opcjonalne)</label><input id="email" type="text" name="email">
-							<label for="tekst">Twoja wiadomość</label><textarea name="tekst" id="tekst"></textarea>
+							<label for="email"><span>Twój email <sup>(opcjonalne)</sup></span><input id="email" type="text" name="email"></label>
+							<label for="tekst"><span>Twoja wiadomość</span><textarea name="tekst" id="tekst"></textarea></label>
 							<input type="hidden" name="recaptcha" id="recaptcha">
-							<input type="submit" name="" value="WYŚLIJ">
+							<label for="submit"><span></span><input type="submit" name="sumbit" value="WYŚLIJ"></label>
 						</form>
 						<div class="footer"> Strona powstała na imprezie <a href="https://hackyeah.pl/">HackYeah 2020 online</a>. #zostańwdomu
 						</div>

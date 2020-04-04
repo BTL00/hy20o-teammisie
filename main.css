@@ -1,3 +1,9 @@
+html, body {
+	font-family: "Rubik", Helvetica;
+}
+h1, h2, h3, h4, h5 {
+	font-family: "Montserrat", Serif;
+}
 .komputerowa {
 		background: #a2a3af;
 		padding: 10%; 
@@ -19,7 +25,7 @@
 	text-align: center;
 	background: white;
 	margin: auto auto; 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
   transition: 0.3s;
 }
 
@@ -32,4 +38,15 @@
 	font-size: 0.8rem;
 	opacity: 0.9;
 }
-
+input, textarea {
+	width: 50%;
+}
+label span {
+	width: 50%;
+	text-align: left;
+}
+label {
+	font-weight: 500;
+	display: block;
+	width: 80%;
+}

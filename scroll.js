@@ -8,7 +8,7 @@ function scroll(event){
     var yPercentage = y/screen.height;
     var xPercentage = x/screen.width;
 
-    window.scrollTo(1.8*xPercentage*width - 150 ,5*yPercentage*height-150);
+    window.scrollTo(1.8*xPercentage*width ,5.3*yPercentage*height);
 }
 
 window.onmousemove = scroll;

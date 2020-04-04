@@ -1,14 +1,21 @@
 html, body {
 	font-family: "Rubik", Helvetica;
+	font-size: 1.3rem;
 }
 h1, h2, h3, h4, h5 {
 	font-family: "Montserrat", Serif;
+	color: rgba(0,0,0,0.9);
 }
 .komputerowa {
 		background: #a2a3af;
 		padding: 10%; 
 }
 
+.half {
+	display: inline-block;
+	width: 50%;
+	text-align: justify;
+}
 
 .back {
 	display: none;
@@ -27,14 +34,19 @@ h1, h2, h3, h4, h5 {
 	margin: auto auto; 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
-
 }
 
 .front:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.front:after {
-	transform: matrix(-1, -0.1, 0, 1, 0, 0);
+.front img {
+	display: inline;
+	max-width: 50%;
+}
+
+.front .half img {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .footer {
@@ -54,6 +66,16 @@ label {
 	width: 80%;
 }
 
+@media screen and (max-width: 576px) {
+.pc-only {
+display: none;
+}
+}
+@media screen and (min-width: 576px) {
+.mobile-only {
+display: none;
+}
+}
 
 #comp1 .front { background: #d0ff02 }
 #comp2 .front { background: #d0aad0 }

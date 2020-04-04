@@ -1,5 +1,13 @@
 .komputerowa {
 		background: #d2d3ff;
+		padding: 50px; 
 }
 
 
+.back {
+	display: none;
+}
+.front {
+	color: #ddffdd;
+	margin: auto auto; 
+}

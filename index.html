@@ -18,8 +18,30 @@
 	<script src="https://www.google.com/recaptcha/api.js?render=6LcwvOYUAAAAAChuthWTu7rk2A56RIOOstznxL2w"></script>
 	<script type="text/javascript">
 		grecaptcha.ready(function() {
-		    grecaptcha.execute('6LcwvOYUAAAAAChuthWTu7rk2A56RIOOstznxL2w', {action: 'homepage'});
+		    grecaptcha.execute('6LcwvOYUAAAAAChuthWTu7rk2A56RIOOstznxL2w', {action: 'homepage'}).then(function(token) {
+       			const Http = new XMLHttpRequest();
+				const url='./rest.php?validate_token' + token;
+				Http.open("GET", url);
+				Http.send();
+
+				Http.onreadystatechange = (e) => {
+				  odpowiedz = JSON.parse(Http.responseText);
+				  if(odpowiedz.score < 0.3) {
+				  	var form = document.getElementById("dodaj");
+					var elements = form.elements;
+					for (var i = 0, len = elements.length; i < len; ++i) {
+					    elements[i].readOnly = true;
+					}
+				  }else{
+				  	document.querySelector("#recaptcha").value = odpowiedz;
+				  }
+				  console.log(odpowiedz);
+				}
+    	});
 		});
+
+
+
 	</script>
 </head>
 <body>
@@ -99,9 +121,10 @@
 		<div class="komputerowa" id="comp10">
 						<h2>Dodaj swoją poradę</h2>
 						<p>Jeśli masz poradę dla osób nietechnicznych na czas walki z #covid19 zostaw ją tutaj.</p>
-						<form>
+						<form id="#dodaj">
 							<label for="email">Twój email (opcjonalne)</label><input id="email" type="text" name="email">
-							<label for="tekst">Twoja wiadomość</label><textarea name="tekst" id="tekst'></textarea>
+							<label for="tekst">Twoja wiadomość</label><textarea name="tekst" id="tekst"></textarea>
+							<input type="hidden" name="recaptcha" id="recaptcha">
 							<input type="submit" name="" value="WYŚLIJ">
 						</form>
 		</div>  

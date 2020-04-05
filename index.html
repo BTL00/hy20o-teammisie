@@ -152,12 +152,12 @@
 </body>
 <script type="text/javascript">
 	let form = document.querySelector("form");
-	let recaptcha = document.querySelector("#recaptcha").value;
-	let email = document.querySelector("#email").value;
-	let tekst = document.querySelector("#tekst").value;
 
 	document.getElementById("submit").addEventListener("click", function(event){
 	  event.preventDefault()
+	 email = document.querySelector("#email").value;
+	 tekst = document.querySelector("#tekst").value;
+	 recaptcha = document.querySelector("#recaptcha").value;
 
 
        			const Http = new XMLHttpRequest();

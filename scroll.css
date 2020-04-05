@@ -2,7 +2,7 @@
 body, html {
 	background: rgb(225,225,225);
 	cursor: all-scroll;
-  height: 420vh;
+  height: auto;
   width: 200vw;
   overflow: scroll;
   margin: 0;
@@ -37,4 +37,31 @@ body, html {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
+}
+
+@media only screen and (max-width: 578px) {
+
+body, html {
+	background: rgb(225,225,225);
+	cursor: all-scroll;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.komputerowa {
+	  flex: auto;
+	  margin: 16px 16px 16px 16px; /* Some gutter */
+	width: 95vw;
+	min-width: 90vw;
+	max-width: 10vw;
+
+}
+
+#strona {
+	margin-left: 0px;
+}
+
 }

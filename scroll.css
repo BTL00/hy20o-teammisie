@@ -1,32 +1,39 @@
-div {
-  overflow: scroll;
-  color: black;
-  height: 100%;
-  width: 100%;
-}
+
 body, html {
 	background: rgb(225,225,225);
 	cursor: all-scroll;
-  height: 360vh;
-  width: 160vw;
+  height: 420vh;
+  width: 200vw;
   overflow: scroll;
   margin: 0;
-  padding: 0;
+  padding: 30px;
 }
 
+.not #strona {
+		--display: grid;
+	--grid-template-columns: 70vw 70vw;
+  	--grid-template-rows: 70vh 70vh 70vh 70vh 70vh;
+
+}
 #strona {
-	display: grid;
-	grid-template-columns: 70vw 70vw;
-  	grid-template-rows: 70vh 70vh 70vh 70vh 70vh;
+
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -16px; /* Adjustment for the gutter */
 
 }
 .komputerowa {
-	width:70vw;
-	height: 70vh;
+	  flex: auto;
+	  margin: 16px 16px 16px 16px; /* Some gutter */
+	min-width: 960px;
+	max-width: 55vw;
+
+
+
 }
 
 .floating {
-	display: hidden;
+	display: none;
 	position: fixed;
 	bottom: 30px;
 	right: 30px;

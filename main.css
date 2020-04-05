@@ -5,10 +5,19 @@ html, body {
 code {
 		font-family: monospace;
 		font-size: 1.5rem;
+		word-wrap: break-word;
 		color: rgba(0,0,0,0.9);
 
 }
-h1, h2, h3, h4, h5 {
+
+h1 {
+	font-display: block;
+	font-family: "Teko", Montserrat;
+}
+h1 span {
+	color: rgba(0,0,0,0.6);
+}
+h2, h3, h4, h5 {
 	font-family: "Montserrat", Serif;
 	color: rgba(0,0,0,0.9);
 }
@@ -26,19 +35,14 @@ a:visited {
 
 }
 
-.half {
-	display: inline-block;
-	width: 45%;
-	text-align: justify;
-	padding: 5px;
-}
 
 .back {
 	display: none;
 }
 .front {
+	padding: 20px;
 	overflow: hidden;
-	width: 960px;
+	width: 920px;
 	height: 620px;
 	vertical-align: middle;
 	text-align: center;
@@ -56,10 +60,7 @@ a:visited {
 	max-width: 50%;
 }
 
-.front .half img {
-	max-width: 100%;
-	max-height: 100%;
-}
+
 
 .footer {
 	margin-top: 90px;
@@ -72,8 +73,25 @@ a:visited {
 .pc-only {
 display: none;
 }
+.front img {
+	display: inline;
+	max-width: 80%;
+}
+
 }
 @media screen and (min-width: 576px) {
+.half {
+	display: inline-block;
+	width: 45%;
+	text-align: justify;
+	padding: 5px;
+}
+
+.front .half img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .mobile-only {
 display: none;
 }
@@ -81,9 +99,9 @@ display: none;
 
 @media only screen and (max-width: 578px) {
 .front {
-	width: 100%;
+	width: 90%;
 	min-height: 200px;
-	max-height: 300px;
+	max-height: 380px;
 }
 body, html {
 		font-size: 1rem;
@@ -92,14 +110,13 @@ body, html {
 }
 
 #comp1 img {
-	transform: translate(45%, -20%);
+	transform: translate(45%, -13%);
 }
 #comp1 h2 {
 		transform: translate(-5%, 25%);
 
 }
-
-.not #comp1 .front { background: #d0ff02 }
+ #comp1 .front { background: #f3f3f3 }
 .not #comp2 .front { background: #d0aad0 }
 .not #comp3 .front {background: #a0dad0}
 .not #comp4 .front {background: #d0ff02}

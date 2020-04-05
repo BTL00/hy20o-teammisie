@@ -91,7 +91,13 @@ body, html {
 
 }
 
+#comp1 img {
+	transform: translate(45%, -20%);
+}
+#comp1 h2 {
+		transform: translate(-5%, 25%);
 
+}
 
 .not #comp1 .front { background: #d0ff02 }
 .not #comp2 .front { background: #d0aad0 }

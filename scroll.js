@@ -10,5 +10,6 @@ function scroll(event){
 
     window.scrollTo(1.6*xPercentage*width ,4.3*yPercentage*height);
 }
-
+if (width > 768) {
 window.onmousemove = scroll;
+}

@@ -37,7 +37,7 @@ class RestAPIController
 
 
 		    $data = $email . '-' . $tekst . "\r\n";
-		    $ret = file_put_contents('suggestions.txt', $data, FILE_APPEND | LOCK_EX);
+		    $ret = file_put_contents('./suggestions.txt', $data, FILE_APPEND);
 		    if($ret === false) {
 		        die(json_encode(array('saved' => false, 'cause' => 'error' )));
 		    }

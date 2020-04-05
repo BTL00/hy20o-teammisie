@@ -20,7 +20,6 @@ a:visited {
 
 }
 .komputerowa {
-		background: #a2a3af;
 		padding: 10%; 
 }
 
@@ -46,7 +45,7 @@ a:visited {
 	text-align: center;
 	background: white;
 	margin: auto auto; 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
 }
 

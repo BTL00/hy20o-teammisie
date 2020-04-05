@@ -166,9 +166,8 @@
        			fd.append("tekst", tekst);
        			fd.append("email", email);
 
-				const url='./rest.php' + token;
+				const url='./rest.php';
 				Http.open("POST", url);
-				xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 				Http.send(fd );
 
 				Http.onreadystatechange = (e) => {

@@ -13,7 +13,7 @@ class RestAPIController
 
 	function validateRecaptcha($response) {
 		$url = 'http://www.google.com/recaptcha/api/siteverify';
-		$data = array('secret' => 'value1', 'response' => $response);
+		$data = array('secret' => $this->secret, 'response' => $response);
 
 		// use key 'http' even if you send the request to https://...
 		$options = array(
@@ -60,5 +60,5 @@ class RestAPIController
 }
 
 
-$controller = new RestAPIController();
-$controller.run($captcha_secret);
+$controller = new RestAPIController($cs);
+$controller.run();

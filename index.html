@@ -139,15 +139,49 @@
 					<div class="front">
 						<h2>Dodaj swoją poradę</h2>
 						<p>Jeśli masz poradę dla osób nietechnicznych na czas walki z #covid19 zostaw ją tutaj.</p>
-						<form id="#dodaj">
+						<form id="#dodaj" method="POST" action="./rest.php">
 							<input class="input" placeholder="Twój e-mail (opcjonalnie)" id="email" type="text" name="email"></label>
 							<textarea name="tekst" placeholder="Twoja wiadomość..." class="input" id="tekst"></textarea></label>
 							<input type="hidden" name="recaptcha" id="recaptcha">
-							<label for="submit"><span></span><input type="submit" class="submit" name="submit" value="WYŚLIJ"></label>
+							<label for="submit"><span></span><input type="submit" class="submit" name="submit" id="submit" value="WYŚLIJ"></label>
 						</form>
 						<div class="footer"> Strona powstała na imprezie <a href="https://hackyeah.pl/">HackYeah 2020 online</a>.
 						</div>
 		</div>  
 	</div>
 </body>
+<script type="text/javascript">
+	let form = document.querySelector("form");
+	let recaptcha = document.querySelector("#recaptcha").value;
+	let email = document.querySelector("#email").value;
+	let tekst = document.querySelector("#tekst").value;
+
+	document.getElementById("submit").addEventListener("click", function(event){
+	  event.preventDefault()
+
+
+       			const Http = new XMLHttpRequest();
+       			let fd = new FormData(form);
+       			fd.append("recaptcha", recaptcha);
+       			fd.append("tekst", tekst);
+       			fd.append("email", email);
+
+				const url='./rest.php' + token;
+				Http.open("POST", url);
+				xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+				Http.send(fd );
+
+				Http.onreadystatechange = (e) => {
+						form.innerHTML += "<p>Twoja wiadomość została zapisana!</p>";
+				  console.log(Http.responseText);
+				}
+
+
+	});
+
+
+
+
+
+</script>
 </html>

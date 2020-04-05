@@ -61,4 +61,4 @@ class RestAPIController
 
 
 $controller = new RestAPIController($cs);
-$controller.run();
+$controller->run();
